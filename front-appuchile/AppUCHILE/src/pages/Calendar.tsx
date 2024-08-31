@@ -8,7 +8,7 @@ import DefaultLayout from '../layout/DefaultLayaout';
 import Breadcrumb from '../components/Breadcrumbs/Breadcrumbs';
 import { formatDate } from "@fullcalendar/core";
 
-// Definir el tipo de evento
+
 interface Event {
   id: string;
   title: string;
@@ -50,10 +50,10 @@ const Calendar = () => {
     <DefaultLayout>
       <Breadcrumb pageName="Calendar" />
 
-      <div style={{ margin: "20px" }}>
+      <div style={{ margin: "70px" }}>
         <div style={{ display: "flex", justifyContent: "space-between" }}>
           {/* CALENDAR SIDEBAR */}
-          <div style={{ flex: "1 1 20%", backgroundColor: "#0b2027", padding: "15px", borderRadius: "8px" }}>
+          <div style={{ flex: "1 1 20%", backgroundColor: "#0b2027", padding: "10px", borderRadius: "8px" }}>
             <h5>Eventos</h5>
             <ul style={{ listStyle: "none", padding: 0 }}>
               {currentEvents.map((event) => (
@@ -82,7 +82,7 @@ const Calendar = () => {
           </div>
 
           {/* CALENDAR */}
-          <div style={{ flex: "1 1 100%", marginLeft: "15px" }}>
+          <div style={{ flex: "1 1 100%", marginLeft: "20px" }}>
             <FullCalendar
               height="75vh"
               plugins={[
