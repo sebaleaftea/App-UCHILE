@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import Loader from './common/loader';
 import PageTitle from './components/Pagetitle';
-import Laboratorio from './pages/Dashboard/Laboratorio';
+import CrearEquipo from './pages/Equipos/CrearEquipo';
 import Calendar from './pages/Calendar';
 import Añadirusuario from './pages/Usuarios/añadirUsuario';
 
@@ -29,7 +29,7 @@ function App() {
           element={
             <>
               <PageTitle title="Panel de control lab. U Chile" />
-              <Laboratorio />
+              <CrearEquipo />
             </>
           }
         />

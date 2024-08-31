@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import SidebarLinkGroup from './SidebarLinkGroup';
 import { MdOutlineFolderOpen } from "react-icons/md";
-
+import lmmLogo from '../../assets/lmmLogo.png';
 
 interface SidebarProps {
   sidebarOpen: boolean;
@@ -66,7 +66,12 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
       {/* <!-- SIDEBAR HEADER --> */}
       <div className="flex items-center justify-between gap-2 px-6 py-5.5 lg:py-6.5">
         <NavLink to="/">
-         <h4>Departamento de Quimica U de Chile </h4>
+        <img 
+        src={lmmLogo} 
+        alt='logo' 
+        className="w-full h-auto mr-4 border-1 border-blue-500 rounded-xl shadow-2xl 
+                   hover:scale-110 transition-transform duration-300" 
+        />
         </NavLink>
 
         <button
@@ -151,7 +156,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                             fill=""
                           />
                         </svg>
-                        Dashboard
+                        Equipos
                         <svg
                           className={`absolute right-4 top-1/2 -translate-y-1/2 fill-current ${
                             open && 'rotate-180'
@@ -185,7 +190,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                                 (isActive && '!text-white')
                               }
                             >
-                              Lab.Quimica U de Chile
+                              Crear Equipo
                             </NavLink>
                           </li>
                         </ul>
@@ -406,6 +411,36 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                           />
                         </svg>
                       </NavLink>
+                      <div
+                        className={`translate transform overflow-hidden ${
+                          !open && 'hidden'
+                        }`}
+                      >
+                        <ul className="mt-4 mb-5.5 flex flex-col gap-2.5 pl-10">
+                          <li>
+                            <NavLink
+                              to="/usuarios/crearusuario"
+                              className={({ isActive }) =>
+                                'group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white ' +
+                                (isActive && '!text-white')
+                              }
+                            >
+                              Crear Usuario
+                            </NavLink>
+                          </li>
+                          <li>
+                            <NavLink
+                              to="/usuarios/listadeusuarios"
+                              className={({ isActive }) =>
+                                'group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-bodydark2 duration-300 ease-in-out hover:text-white ' +
+                                (isActive && '!text-white')
+                              }
+                            >
+                              Lista de Usuarios
+                            </NavLink>
+                          </li>
+                        </ul>
+                      </div>
                     </React.Fragment>
                   );
                 }}

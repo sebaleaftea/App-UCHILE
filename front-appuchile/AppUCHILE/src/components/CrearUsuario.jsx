@@ -1,7 +1,7 @@
 import {useState} from 'react';
-i/* mport {AddUsuarios} from '../api'; */
+/* mport {AddUsuarios} from '../api'; */
 
-const CrearCliente = () => {
+const CrearUsuario = () => {
     const [dataFormulario, setdataFormulario] = useState({
         nombre_usuario : "",
         apellido_usuario: "",
@@ -135,4 +135,4 @@ const CrearCliente = () => {
         </form>
       );
 };
-export default CrearCliente;
+export default CrearUsuario;
