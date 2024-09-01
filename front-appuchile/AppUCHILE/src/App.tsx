@@ -2,9 +2,11 @@ import { useEffect, useState } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import Loader from './common/loader';
 import PageTitle from './components/Pagetitle';
-import CrearEquipo from './pages/Equipos/CrearEquipo';
+//import CrearEquipo from './pages/Equipos/CrearEquipo';
 import Calendar from './pages/Calendar';
 import Añadirusuario from './pages/Usuarios/añadirUsuario';
+import Login from './pages/Login';
+import Perfil from './pages/Perfil';
 
 
 function App() {
@@ -25,15 +27,15 @@ function App() {
     <>
       <Routes>        
         <Route
-          index
+          index // esto redirije a la parte principal de todas las rutas: /
           element={
             <>
-              <PageTitle title="Panel de control lab. U Chile" />
-              <CrearEquipo />
+              <PageTitle title="Login LMM U de Chile" />
+              <Login />
             </>
           }
         />
-        <Route 
+        <Route
          path='/calendar'
          element={
           <>
@@ -41,6 +43,15 @@ function App() {
             <Calendar />
           </>
          }
+        />
+        <Route
+        path='/profile' 
+        element={
+          <>
+          <PageTitle title='Perfil de Usuario'/>
+          <Perfil />
+          </>
+        } 
         />
         <Route
           path="/Usuarios/añadirUsuario"
