@@ -1,13 +1,13 @@
 import DefaultLayout from "../../layout/DefaultLayaout.js";
 import Breadcrumb from "../../components/Breadcrumbs/Breadcrumbs.js";
+import CrearUsuario from "../../components/CrearUsuario.js";
 
 const Añadirusuario = () => {
     return (
         <DefaultLayout>
-            <div className="mx-auto max-w-270">
-                <Breadcrumb pageName="Añadir Usuario" />
+            <Breadcrumb pageName="Añadir Usuario" />
 
-            </div>
+            <CrearUsuario />
         </DefaultLayout>
     )
 }

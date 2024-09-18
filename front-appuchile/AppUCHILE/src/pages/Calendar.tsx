@@ -48,7 +48,7 @@ const Calendar = () => {
 
   return (
     <DefaultLayout>
-      <Breadcrumb pageName="Calendar" />
+      <Breadcrumb pageName="Calendario" />
 
       <div style={{ margin: "70px" }}>
         <div style={{ display: "flex", justifyContent: "space-between" }}>

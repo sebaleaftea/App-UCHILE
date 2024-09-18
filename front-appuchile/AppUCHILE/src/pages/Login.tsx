@@ -8,9 +8,11 @@ const Login: React.FC = () => {
   const [password, setPassword] = useState('');
   const navigate = useNavigate(); 
 
-  // Credenciales correctas
+// Credenciales correctas
   const correctUsername = 'admin';
   const correctPassword = 'password123';
+
+// 
 
   const styles = {
     wrapper: {
