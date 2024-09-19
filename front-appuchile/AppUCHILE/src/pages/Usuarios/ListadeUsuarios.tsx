@@ -1,15 +1,15 @@
 import Breadcrumb from '../../components/Breadcrumbs/Breadcrumbs';
 import DefaultLayout from '../../layout/DefaultLayaout';
-import ListaUsuarios from '../../components/ListaUsuarios';
+import UserList from '../../components/ListaUsuarios';
 
-const UserList = () => {
+const ListadeUsuarios = () => {
     return (
         <DefaultLayout>
             <Breadcrumb pageName='Lista de Usuarios' />
 
-            <ListaUsuarios />
+            <UserList />
         </DefaultLayout>
     );
 };
 
-export default UserList;
+export default ListadeUsuarios;
