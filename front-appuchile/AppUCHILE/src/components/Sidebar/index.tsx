@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useEffect, useRef, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import SidebarLinkGroup from './SidebarLinkGroup';
@@ -126,6 +127,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                         }`}
                         onClick={(e) => {
                           e.preventDefault();
+                          // eslint-disable-next-line @typescript-eslint/no-unused-expressions
                           sidebarExpanded
                             ? handleClick()
                             : setSidebarExpanded(true);
@@ -248,6 +250,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                         }`}
                         onClick={(e) => {
                           e.preventDefault();
+                          // eslint-disable-next-line @typescript-eslint/no-unused-expressions
                           sidebarExpanded
                             ? handleClick()
                             : setSidebarExpanded(true);
@@ -358,6 +361,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                         }`}
                         onClick={(e) => {
                           e.preventDefault();
+                          // eslint-disable-next-line @typescript-eslint/no-unused-expressions
                           sidebarExpanded
                             ? handleClick()
                             : setSidebarExpanded(true);

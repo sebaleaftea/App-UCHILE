@@ -3,7 +3,9 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import Loader from './common/loader';
 import PageTitle from './components/Pagetitle';
 //import CrearEquipo from './pages/Equipos/CrearEquipo';
-import UserList from './pages/Usuarios/ListadeUsuarios';
+import UserList from "./pages/Usuarios/listadeUsuarios";
+import AñadirRol from './pages/Roles/añadirRol';
+import AñadirPermiso from './pages/Permisos/añadirPermiso';
 import Calendar from './pages/Calendar';
 import Añadirusuario from './pages/Usuarios/añadirUsuario';
 import Login from './pages/Login';
@@ -64,6 +66,24 @@ function App() {
           }
         />
         <Route
+          path="/Usuarios/listadeusuarios/crearRol"
+          element={
+            <>
+              <PageTitle title="Crear Rol" />
+              <AñadirRol />
+            </>
+          }
+        />
+        <Route
+          path="/Usuarios/listadeusuarios/crearPermiso"
+          element={
+            <>
+              <PageTitle title="Crear Permiso" />
+              <AñadirPermiso />
+            </>
+          }
+        />
+        <Route
           path="/Usuarios/listadeusuarios"
           element={
             <>
@@ -72,8 +92,6 @@ function App() {
             </>
           }
         />
-
-
       </Routes>
     </>
   );

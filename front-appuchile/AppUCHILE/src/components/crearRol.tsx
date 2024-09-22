@@ -1,12 +1,10 @@
 import { useState } from 'react';
-import {AddUsuarios} from '../Api/apiUsuarios';
+import {AddRoles} from '../Api/apiRoles';
 
-const CrearUsuario = () => {
+const CrearRol = () => {
   const [dataFormulario, setdataFormulario] = useState({
-    nombre_usuario: "",
-    username: "",
-    contraseña: "",
-    rol: "",
+    nombre_rol: "",
+    id: "",
   });
 
   const handleOnChange = (event) => {
@@ -17,10 +15,10 @@ const CrearUsuario = () => {
   const handleOnSubmit = async(event) => {
     event.preventDefault();
     try {
-      const nuevoUsuario = await AddUsuarios(dataFormulario);
-      console.log('Usuario Creado', nuevoUsuario)
+      const nuevoRol = await AddRoles(dataFormulario);
+      console.log('Rol Creado', nuevoRol)
     } catch(error){
-      console.error('No se ha podido cargar el nuevo usuario')
+      console.error('No se ha podido cargar el nuevo rol')
     }
   }
 
@@ -30,9 +28,9 @@ const CrearUsuario = () => {
         <label>Nombre:</label>
         <input 
           type="text" 
-          id="nombre"
-          name="nombre_usuario"
-          value={dataFormulario.nombre_usuario} 
+          id="nombre_rol"
+          name="nombre_rol"
+          value={dataFormulario.nombre_rol} 
           onChange={handleOnChange} 
           style={styles.input} 
           required 
@@ -42,41 +40,16 @@ const CrearUsuario = () => {
         <label>Username:</label>
         <input 
           type="text" 
-          id="username"
-          name="username"
-          value={dataFormulario.username} 
+          id="id"
+          name="id"
+          value={dataFormulario.id} 
           onChange={handleOnChange} 
           style={styles.input} 
           required 
         />
       </div>
-      <div style={styles.formGroup}>
-        <label>Contraseña:</label>
-        <input 
-          type="text" 
-          id="contraseña"
-          name="contraseña"
-          value={dataFormulario.contraseña}
-          onChange={handleOnChange} 
-          style={styles.input} 
-          required 
-        />
-      </div>
-      <div style={styles.formGroup}>
-        <label>Rol:</label>
-        <select
-          id="rol" 
-          name="rol"
-          value={dataFormulario.rol} 
-          onChange={handleOnChange} 
-          style={styles.select}
-        >
-          <option value="Administrador">Administrador</option>
-          <option value="Sub-Administrador">Sub-Administrador</option>
-          <option value="Usuario">Usuario</option>
-        </select>
-      </div>
-      <button type="submit" style={styles.submitButton}>Crear Usuario</button>
+      
+      <button type="submit" style={styles.submitButton}>Crear Rol</button>
     </form>
   );
 };
@@ -115,4 +88,4 @@ const styles = {
   },
 };
 
-export default CrearUsuario;
+export default CrearRol;
