@@ -1,12 +1,13 @@
 import { useState } from "react";
-import FullCalendar from "@fullcalendar/react";
-import dayGridPlugin from "@fullcalendar/daygrid";
-import timeGridPlugin from "@fullcalendar/timegrid";
-import interactionPlugin from "@fullcalendar/interaction";
-import listPlugin from "@fullcalendar/list";
+import FullCalendar from "@fullcalendar/react"; //free
+import dayGridPlugin from "@fullcalendar/daygrid"; //free
+import timeGridPlugin from "@fullcalendar/timegrid"; //free
+import { formatDate } from "@fullcalendar/core"; //free
+import interactionPlugin from "@fullcalendar/interaction"; // free
+import listPlugin from "@fullcalendar/list"; // free
 import DefaultLayout from '../layout/DefaultLayaout';
 import Breadcrumb from '../components/Breadcrumbs/Breadcrumbs';
-import { formatDate } from "@fullcalendar/core";
+
 
 
 interface Event {
@@ -20,6 +21,7 @@ interface Event {
 const Calendar = () => {
   const [currentEvents, setCurrentEvents] = useState<Event[]>([]);
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleDateClick = (selected: any) => {
     const title = prompt("Por favor , agrega un titulo a tu agenda");
     const calendarApi = selected.view.calendar;
@@ -36,6 +38,7 @@ const Calendar = () => {
     }
   };
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const handleEventClick = (selected: any) => {
     if (
       window.confirm(

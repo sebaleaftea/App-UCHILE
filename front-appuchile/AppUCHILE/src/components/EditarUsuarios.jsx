@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getUsuarios, UpdateUsuarios } from '../api';
+import { getUsuarios, UpdateUsuarios } from '../Api/apiUsuarios';
 import { useParams } from 'react-router-dom';
 
 const EditUsuario = () => {

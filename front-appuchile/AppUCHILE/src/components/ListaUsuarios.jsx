@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { getUsuarios } from '../api';
-import DelUsuario from './EliminarUsuario';
+import { getUsuarios } from '../Api/apiUsuarios';
+import DelUsuario from '../Api/apiUsuarios';
 import { useNavigate, Link } from 'react-router-dom';
 
 const UserList = () => {
@@ -33,12 +33,20 @@ const UserList = () => {
     navigate('/Usuarios/listadeusuarios/añadirUsuario');  
   };
 
+  const handleCreateRol = () => {
+    navigate('/Usuarios/listadeusuarios/crearRol');  
+  };
+
+  const handleCreatePermiso = () => {
+    navigate('/Usuarios/listadeusuarios/crearPermiso');  
+  };
+
   if (loading) {
     return <div>Loading...</div>;
   }
 
   return (
-    <div className="p-6 bg-white shadow-md rounded-lg">
+    <div className="p-6 bg-transparent shadow-md rounded-lg">
       <div className="flex justify-between items-center mb-4">
         {/* Botón para crear un nuevo usuario */}
         <button
@@ -46,6 +54,18 @@ const UserList = () => {
           className="bg-green-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
         >
           Crear Usuario
+        </button>
+        <button
+          onClick={handleCreatePermiso}  // Llama a la función de redirección al hacer clic
+          className="bg-green-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+        >
+          Crear Permiso
+        </button>
+        <button
+          onClick={handleCreateRol}  // Llama a la función de redirección al hacer clic
+          className="bg-green-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+        >
+          Crear Rol
         </button>
       </div>
       <div className="overflow-x-auto">
