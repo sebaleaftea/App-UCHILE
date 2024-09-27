@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import {AddUsuarios} from '../Api/apiUsuarios';
+import {AddUsuarios} from '../../Api/apiUsuarios';
 
 const CrearUsuario = () => {
   const [dataFormulario, setdataFormulario] = useState({

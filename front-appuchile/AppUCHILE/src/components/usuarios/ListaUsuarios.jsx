@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { getUsuarios } from '../Api/apiUsuarios';
-import DelUsuario from '../Api/apiUsuarios';
+import { getUsuarios } from '../../Api/apiUsuarios';
+import DelUsuario from '../../Api/apiUsuarios';
 import { useNavigate, Link } from 'react-router-dom';
 
 const UserList = () => {

@@ -1,6 +1,6 @@
 import Breadcrumb from '../../components/Breadcrumbs/Breadcrumbs';
 import DefaultLayout from '../../layout/DefaultLayaout';
-import UserList from '../../components/ListaUsuarios';
+import UserList from '../../components/usuarios/ListaUsuarios';
 
 const ListadeUsuarios = () => {
     return (
