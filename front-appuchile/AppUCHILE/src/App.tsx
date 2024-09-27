@@ -2,12 +2,17 @@ import { useEffect, useState } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import Loader from './common/loader';
 import PageTitle from './components/Pagetitle';
-//import CrearEquipo from './pages/Equipos/CrearEquipo';
-import UserList from "./pages/Usuarios/listadeUsuarios";
+import ListaPapers from './pages/Papers/listaPapers';
+import AñadirPaper from './pages/Papers/añadirPaper';
+import ListadeUsuarios from "./pages/Usuarios/listadeUsuarios";
+import Añadirusuario from './pages/Usuarios/añadirUsuario';
 import AñadirRol from './pages/Roles/añadirRol';
 import AñadirPermiso from './pages/Permisos/añadirPermiso';
+import ListadeInventario from './pages/Inventarios/listaInventario';
+import AñadirItem from './pages/Inventarios/añadirItem';
+import ListadeEquipos from './pages/Equipos/listadeEquipos';
+import AñadirEquipo from './pages/Equipos/añadirEquipo';
 import Calendar from './pages/Calendar';
-import Añadirusuario from './pages/Usuarios/añadirUsuario';
 import Login from './pages/Login';
 import Perfil from './pages/Perfil';
 
@@ -88,7 +93,61 @@ function App() {
           element={
             <>
               <PageTitle title="Lista de Usuarios" />
-              <UserList />
+              <ListadeUsuarios />
+            </>
+          }
+        />
+        <Route
+          path="/Papers/listaPapers"
+          element={
+            <>
+              <PageTitle title="Lista de Papers" />
+              <ListaPapers />
+            </>
+          }
+        />
+        <Route
+          path="/Papers/listaPapers/añadirPaper"
+          element={
+            <>
+              <PageTitle title="Añadir Paper" />
+              <AñadirPaper />
+            </>
+          }
+        />
+        <Route
+          path="/ListaInventario"
+          element={
+            <>
+              <PageTitle title="Lista de Inventario" />
+              <ListadeInventario />
+            </>
+          }
+        />
+        <Route
+          path="/listadeinventario/añadirItem"
+          element={
+            <>
+              <PageTitle title="Añadir Item" />
+              <AñadirItem />
+            </>
+          }
+        />
+        <Route
+          path="/ListaEquipos"
+          element={
+            <>
+              <PageTitle title="Lista de Equipos" />
+              <ListadeEquipos />
+            </>
+          }
+        />
+        <Route
+          path="/ListaEquipos/añadirEquipo"
+          element={
+            <>
+              <PageTitle title="Añadir Equipo" />
+              <AñadirEquipo />
             </>
           }
         />

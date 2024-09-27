@@ -121,7 +121,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                       <NavLink
                         to="#"
                         className={`group relative flex items-center gap-2.5 rounded-sm px-4 py-2 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
-                          (pathname === '/CrearEquipo' ||
+                          (pathname === '/Equipo' ||
                             pathname.includes('dashboard')) &&
                           'bg-graydark dark:bg-meta-4'
                         }`}
@@ -186,13 +186,13 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                         <ul className="mt-4 mb-5.5 flex flex-col gap-2.5 pl-6">
                           <li>
                             <NavLink
-                              to="/Crear Equipo"
+                              to="/ListaEquipos"
                               className={({ isActive }) =>
                                 'group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-white duration-300 ease-in-out hover:text-white' +
                                 (isActive && '!text-white')
                               }
                             >
-                              Crear Equipo
+                              Lista de Equipos
                             </NavLink>
                           </li>
                         </ul>
@@ -322,17 +322,6 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                               Lista de Papers
                             </NavLink>
                           </li>
-                          <li>
-                            <NavLink
-                              to="/Papers/crearPapers"
-                              className={({ isActive }) =>
-                                'group relative flex items-center gap-2.5 rounded-md px-4 font-medium text-white duration-300 ease-in-out hover:text-white ' +
-                                (isActive && '!text-white')
-                              }
-                            >
-                              Crear Paper
-                            </NavLink>
-                          </li>
                         </ul>
                       </div>
                       {/* <!-- Dropdown Menu End --> */}
@@ -449,7 +438,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
               {/* <!-- Menu Archivos --> */}
               <li>
                 <NavLink
-                  to="/Archivos"
+                  to="/ListaInventario"
                   className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
                     pathname.includes('chart') && 'bg-graydark dark:bg-meta-4'
                   }`}
@@ -476,7 +465,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                       </clipPath>
                     </defs>
                   </svg>
-                  Archivos
+                  Inventario
                 </NavLink>
               </li>
               {/* <!-- Menu Inventario --> */}
