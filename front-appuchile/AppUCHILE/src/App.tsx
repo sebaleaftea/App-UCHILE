@@ -32,8 +32,7 @@ function App() {
   return loading ? (
     <Loader />
   ) : (
-    <>
-      <Routes>        
+    <Routes>        
         <Route
           index // esto redirije a la parte principal de todas las rutas: /
           element={
@@ -152,7 +151,6 @@ function App() {
           }
         />
       </Routes>
-    </>
   );
 }
 

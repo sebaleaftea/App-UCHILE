@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: 'http://localhost:8080/'
-})
+    baseURL: '/api',  // Use proxy instead of direct localhost:8080
+  });
 
 export const getPermisos = async () => {
     try {
@@ -36,7 +36,7 @@ export const getPermissionName = async (permissionName) => {
 
 export const AddPermisos = async (permisoData) => {
     try {
-        const response = await api.post('/permisos/', permisoData);
+        const response = await api.post('/permisos', permisoData);
         return response.data;
     } catch (error) {
         console.error('Error al añadir nuevo permiso', error);
