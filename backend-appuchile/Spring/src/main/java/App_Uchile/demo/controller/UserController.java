@@ -2,10 +2,14 @@ package App_Uchile.demo.controller;
 
 import App_Uchile.demo.model.User;
 import App_Uchile.demo.service.UserService;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 
 @RestController
 @RequestMapping("/usuarios")
@@ -19,8 +23,9 @@ public class UserController {
     }
 
     @PostMapping
-    public User createUser(@RequestBody User user){
-        return userService.save(user);
+    public ResponseEntity<User> createUser(@RequestBody User user){
+        User newUser = userService.save(user);
+        return new ResponseEntity<>(newUser, HttpStatus.CREATED);
     }
 
     @GetMapping("/{username}")
