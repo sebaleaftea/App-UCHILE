@@ -59,13 +59,13 @@ const UserList = () => {
           onClick={handleCreatePermiso}  // Llama a la función de redirección al hacer clic
           className="bg-green-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
         >
-          Crear Permiso
+          Permisos
         </button>
         <button
           onClick={handleCreateRol}  // Llama a la función de redirección al hacer clic
           className="bg-green-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
         >
-          Crear Rol
+          Roles
         </button>
       </div>
       <div className="overflow-x-auto">

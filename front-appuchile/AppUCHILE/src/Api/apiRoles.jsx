@@ -53,3 +53,5 @@ export const DeleteRole = async (id) => {
         throw error;
     }
 }
+
+export default api;
