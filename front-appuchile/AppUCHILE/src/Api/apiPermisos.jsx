@@ -53,3 +53,5 @@ export const DeletePermisos = async (id) => {
         throw error;
     }
 }
+
+export default api;

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import {AddRoles} from '../Api/apiRoles';
+import {AddRoles} from "../../Api/apiRoles";
 
 const CrearRol = () => {
   const [dataFormulario, setdataFormulario] = useState({

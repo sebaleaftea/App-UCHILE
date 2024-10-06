@@ -12,11 +12,11 @@ public class SecurityConfig {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
                 // Desactiva CSRF solo para la consola H2
-                .csrf(csrf -> csrf.ignoringRequestMatchers("/h2-console/**", "/usuarios", "/permisos", "/roles"))
+                .csrf(csrf -> csrf.ignoringRequestMatchers("/h2-console/**", "/usuarios", "/permisos/**", "/roles"))
 
                 // Permitir acceso a la consola H2 sin autenticación
                 .authorizeHttpRequests(authz -> authz
-                        .requestMatchers("/h2-console/**", "/usuarios", "/permisos", "/roles").permitAll()
+                        .requestMatchers("/h2-console/**", "/usuarios", "/permisos/**", "/roles").permitAll()
                         .anyRequest().authenticated()
                 )
 

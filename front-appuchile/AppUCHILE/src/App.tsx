@@ -4,7 +4,7 @@ import Loader from './common/loader';
 import PageTitle from './components/Pagetitle';
 import ListaPapers from './pages/Papers/listaPapers';
 import AñadirPaper from './pages/Papers/añadirPaper';
-import ListadeUsuarios from "./pages/Usuarios/listadeUsuarios";
+import ListadeUsuarios from "./pages/Usuarios/ListadeUsuarios";
 import Añadirusuario from './pages/Usuarios/añadirUsuario';
 import AñadirRol from './pages/Roles/añadirRol';
 import AñadirPermiso from './pages/Permisos/añadirPermiso';

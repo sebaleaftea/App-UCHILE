@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { AddPermisos } from '../Api/apiPermisos';
+import  AddPermisos  from '../../Api/apiPermisos';
 
 const CrearPermiso = () => {
   const [dataFormulario, setDataFormulario] = useState({
-    nombre_permiso: "",
+    permission: "",
   });
   const [mensaje, setMensaje] = useState<string | null>(null);  // Para almacenar el mensaje
   const [error, setError] = useState<string | null>(null);      // Para manejar errores
@@ -15,13 +15,13 @@ const CrearPermiso = () => {
 
   const handleOnSubmit = async (event) => {
     event.preventDefault();
-    setMensaje(null);  // Limpiar el mensaje anterior
-    setError(null);    // Limpiar el error anterior
+    setMensaje(null);  
+    setError(null);    
 
     try {
       const nuevoPermiso = await AddPermisos(dataFormulario);
       setMensaje('Permiso creado exitosamente!');   // Mostrar mensaje de éxito
-      setDataFormulario({ nombre_permiso: "" });    // Limpiar formulario después de la creación
+      setDataFormulario({ permission: "" });    // Limpiar formulario después de la creación
     } catch (error) {
       setError('No se ha podido crear el nuevo permiso');  // Mostrar mensaje de error
     }
@@ -34,9 +34,9 @@ const CrearPermiso = () => {
           <label>Nombre:</label>
           <input 
             type="text" 
-            id="nombre_permiso"
-            name="nombre_permiso"
-            value={dataFormulario.nombre_permiso} 
+            id="permission"
+            name="permission"
+            value={dataFormulario.permission} 
             onChange={handleOnChange} 
             style={styles.input} 
             required 
