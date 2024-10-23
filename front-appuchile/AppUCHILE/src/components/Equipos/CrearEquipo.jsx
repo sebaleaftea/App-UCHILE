@@ -3,10 +3,9 @@ import { AddEquipos } from '../../Api/apiEquipos'; // Asegúrate de que esta fun
 
 const CrearEquipo = () => {
   const [dataFormulario, setDataFormulario] = useState({
-    nombre_equipo: "",
+    name: "",
     tipo: "",
-    cantidad: "",
-    acciones: "",
+    
   });
 
   const handleOnChange = (event) => {
@@ -30,9 +29,9 @@ const CrearEquipo = () => {
         <label>Nombre del Equipo:</label>
         <input 
           type="text" 
-          id="nombre_equipo"
-          name="nombre_equipo"
-          value={dataFormulario.nombre_equipo} 
+          id="name"
+          name="name"
+          value={dataFormulario.name} 
           onChange={handleOnChange} 
           style={styles.input} 
           required 
@@ -48,29 +47,6 @@ const CrearEquipo = () => {
           onChange={handleOnChange} 
           style={styles.input} 
           required 
-        />
-      </div>
-      <div style={styles.formGroup}>
-        <label>Cantidad:</label>
-        <input 
-          type="number" 
-          id="cantidad"
-          name="cantidad"
-          value={dataFormulario.cantidad} 
-          onChange={handleOnChange} 
-          style={styles.input} 
-          required 
-        />
-      </div>
-      <div style={styles.formGroup}>
-        <label>Acciones:</label>
-        <input 
-          type="text" 
-          id="acciones"
-          name="acciones"
-          value={dataFormulario.acciones} 
-          onChange={handleOnChange} 
-          style={styles.input} 
         />
       </div>
       <button type="submit" style={styles.submitButton}>Crear Equipo</button>

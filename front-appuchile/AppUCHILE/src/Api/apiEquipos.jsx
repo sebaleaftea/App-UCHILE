@@ -3,14 +3,14 @@ import axios from 'axios';
 // Aca van los endpoints
 
 const api = axios.create({
-    baseURL: 'http://localhost:8080/' // aca chanten la weaita po oe
+    baseURL: '/api' // aca chanten la weaita po oe
 })
 
 // Inicio de seccion de api usuarios
 
 export const getEquipos = async () => {
     try {
-        const response = await api.get('/equipos');  
+        const response = await api.get('/Equipo/');  
         return response.data;
     } catch (error) {
         console.error('Error al cargar usuarios', error);
@@ -40,10 +40,10 @@ export const getEquiporPorNombre = async (equipname) => {
 
 export const AddEquipos = async (userData) => {
     try {
-        const response = await api.post('/equipos/', userData);
+        const response = await api.post('/Equipo/', userData);
         return response.data;
     } catch (error) {
-        console.error('Error al añadir usuario', error);
+        console.error('Error al añadir el equipo', error);
         throw error;
     }
 }

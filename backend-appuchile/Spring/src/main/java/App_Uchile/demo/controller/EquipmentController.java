@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -15,7 +16,8 @@ import App_Uchile.demo.model.Equipment;
 import App_Uchile.demo.service.EquipmentService;
 
 @RestController
-@RequestMapping(("/Equipo"))
+@CrossOrigin(origins = "http://localhost:5173")
+@RequestMapping(("/Equipo/"))
 public class EquipmentController {
     @Autowired
     private EquipmentService equipmentService;

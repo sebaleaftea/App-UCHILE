@@ -6,7 +6,7 @@ const api = axios.create({
 
 export const getPermisos = async () => {
     try {
-        const response = await api.get('/permisos');  
+        const response = await api.get('api/permisos');  
         return response.data;
     } catch (error) {
         console.error('Error al cargar los permisos D: ', error);
@@ -36,7 +36,7 @@ export const getPermissionName = async (permissionName) => {
 
 export const AddPermisos = async (permisoData) => {
     try {
-        const response = await api.post('/permisos', permisoData);
+        const response = await api.post('api/permisos/', permisoData);
         return response.data;
     } catch (error) {
         console.error('Error al añadir nuevo permiso', error);
