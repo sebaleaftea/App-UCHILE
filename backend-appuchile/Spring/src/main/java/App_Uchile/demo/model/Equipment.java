@@ -13,14 +13,18 @@ public class Equipment {
     private Long id;
 
     @Column(nullable= false)
-    private String nombre;
+    private String name;
 
     @Column(nullable = false)
     private String tipo;
 
-    public Equipment(Long id, String nombre, String tipo) {
+    public Equipment(){
+
+    }
+
+    public Equipment(Long id, String name, String tipo) {
         this.id = id;
-        this.nombre = nombre;
+        this.name = name;
         this.tipo = tipo;
     }
 
@@ -32,12 +36,12 @@ public class Equipment {
         this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getName() {
+        return name;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getTipo() {
